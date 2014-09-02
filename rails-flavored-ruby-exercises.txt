@@ -15,3 +15,14 @@ end
 
 "foobar".shuffle
 => "ofobra"
+
+4.12
+person1 = {first: "first", lastキ: "last"}
+person2 = {first: "second", lastキ: "last"}
+person3 = {first: "zero", last: "last"}
+params = {}
+params[:father] = person1
+params[:mother] = person2
+params[:child] = person3
+params[:father][:first]
+=> "first"
