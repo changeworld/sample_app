@@ -5,3 +5,13 @@ end
 
 string_shuffle("foobar")
 => "fbaroo"
+
+4.11
+class String
+  def shuffle
+    self.split('').shuffle[0..-1].join
+  end
+end
+
+"foobar".shuffle
+=> "ofobra"
