@@ -1,0 +1,7 @@
+4.10
+def string_shuffle(s)
+  s.split('').shuffle[0..-1].join
+end
+
+string_shuffle("foobar")
+=> "fbaroo"
