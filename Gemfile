@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
+# Use Bootstrap
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 
 # Use pg as the database for Active Record for Heroku
 gem 'pg', '0.15.1'
