@@ -5,6 +5,7 @@ gem 'rails', '4.0.5'
 # Use Bootstrap
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
+gem 'bcrypt-ruby', '3.1.2'
 
 # Use pg as the database for Active Record for Heroku
 gem 'pg', '0.15.1'
