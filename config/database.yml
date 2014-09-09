@@ -33,7 +33,7 @@ development:
   username: testuser
   password: testuser
 
-test:
+test: &test
   adapter: postgresql
   host: localhost
   encoding: utf8
@@ -41,3 +41,5 @@ test:
   pool: 5
   username: testuser
   password: testuser
+cucumber:
+  <<: *test
