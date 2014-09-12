@@ -35,12 +35,6 @@ describe "User pages" do
 
         it { should have_title('Sign up') }
         it { should have_content('error') }
-        it { should have_content('The form contains 5 errors.') }
-        it { should have_content("* Name can't be blank") }
-        it { should have_content("* Email can't be blank") }
-        it { should have_content('* Email is invalid') }
-        it { should have_content("* Password can't be blank") }
-        it { should have_content('* Password is too short (minimum is 6 characters)') }
       end
     end
 
