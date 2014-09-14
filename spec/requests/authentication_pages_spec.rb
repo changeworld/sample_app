@@ -139,6 +139,11 @@ describe "Authentication" do
         before { post users_path }
         specify { expect(response).to redirect_to(root_path) }
       end
+
+      describe "submitting a DELETE request to the Users#destroy action" do
+        before { delete user_path(admin) }
+        specify { expect(response).to redirect_to(root_path) }
+      end
     end
   end
 end
