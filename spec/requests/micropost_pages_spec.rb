@@ -11,7 +11,6 @@ describe "Micropost pages" do
     before { visit root_path }
 
     describe "with invalid information" do
-
       it "should not create a micropost" do
         expect { click_button "Post" }.not_to change(Micropost, :count)
       end
@@ -23,10 +22,27 @@ describe "Micropost pages" do
     end
 
     describe "with valid information" do
-
       before { fill_in 'micropost_content', with: "Lorem ipsum" }
+
       it "should create a micropost" do
         expect { click_button "Post" }.to change(Micropost, :count).by(1)
+      end
+
+      describe "and post 1 micropost" do
+        before { click_button "Post" }
+
+        it { should have_content('1 micropost') }
+        it { should_not have_content('1 microposts') }
+      end
+
+      describe "and post 2 microposts" do
+        before do
+          click_button "Post"
+          fill_in 'micropost_content', with: "Lorem ipsum"
+          click_button "Post"
+        end
+
+        it { should have_content('2 microposts') }
       end
     end
   end
