@@ -29,6 +29,7 @@ group :test do
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'coveralls', require: false
+  gem 'metric_fu', require: false
 end
 
 # Use SCSS for stylesheets
