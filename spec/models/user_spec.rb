@@ -183,5 +183,25 @@ describe User do
       it { should_not be_following(other_user) }
       its(:followed_users) { should_not include(other_user) }
     end
+
+    describe "relationship associations" do
+      it "should destroy followed user" do
+        relationships = @user.relationships.to_a
+        other_user.destroy
+        expect(relationships).not_to be_empty
+        relationships.each do |relationship|
+          expect(Relationship.where(id: relationship.id)).to be_empty
+        end
+      end
+
+      it "should destroy follower user" do
+        relationships = @user.relationships.to_a
+        @user.destroy
+        expect(relationships).not_to be_empty
+        relationships.each do |relationship|
+          expect(Relationship.where(id: relationship.id)).to be_empty
+        end
+      end
+    end
   end
 end
