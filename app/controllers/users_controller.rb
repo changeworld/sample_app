@@ -53,17 +53,11 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = "Following"
-    @user = User.find(params[:id])
-    @users = @user.followed_users.paginate(page: params[:page])
-    render 'show_follow'
+    before_follow
   end
 
   def followers
-    @title = "Followers"
-    @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
-    render 'show_follow'
+    before_follow
   end
 
   private
@@ -71,6 +65,17 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
+    end
+
+    def before_follow
+      @user = User.find(params[:id])
+      @title = caller.first.split(' ')[1].delete('`').delete("'").capitalize
+      if @title == "Following"
+        @users = @user.followed_users.paginate(page: params[:page])
+      else
+        @users = @user.followers.paginate(page: params[:page])
+      end
+      render 'show_follow'
     end
 
     # Before actions
