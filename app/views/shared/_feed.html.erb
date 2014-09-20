@@ -1,4 +1,5 @@
 <% if @feed_items.any? %>
+  <h3>Microposts (<%= @feed_items.count %>)</h3>
   <ol class="microposts">
     <%= render partial: 'shared/feed_item', collection: @feed_items %>
   </ol>
