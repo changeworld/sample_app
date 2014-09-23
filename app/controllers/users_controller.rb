@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = 'Welcome to the Sample App!'
       redirect_to @user
     else
       render 'new'
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = 'Profile updated'
       redirect_to @user
     else
       render 'edit'
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
       redirect_to root_url
     else
       user.destroy
-      flash[:success] = "User destroyed."
+      flash[:success] = 'User destroyed.'
       redirect_to users_url
     end
   end
@@ -62,34 +62,34 @@ class UsersController < ApplicationController
 
   private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+                                 :password_confirmation)
+  end
 
-    def before_follow
-      @user = User.find(params[:id])
-      @title = caller.first.split(' ')[1].delete('`').delete("'").capitalize
-      if @title == "Following"
-        @users = @user.followed_users.paginate(page: params[:page])
-      else
-        @users = @user.followers.paginate(page: params[:page])
-      end
-      render 'show_follow'
+  def before_follow
+    @user = User.find(params[:id])
+    @title = caller.first.split(' ')[1].delete('`').delete("'").capitalize
+    if @title == 'Following'
+      @users = @user.followed_users.paginate(page: params[:page])
+    else
+      @users = @user.followers.paginate(page: params[:page])
     end
+    render 'show_follow'
+  end
 
-    # Before actions
+  # Before actions
 
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
-    end
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_user?(@user)
+  end
 
-    def admin_user
-      redirect_to(root_path) unless current_user.admin?
-    end
+  def admin_user
+    redirect_to(root_path) unless current_user.admin?
+  end
 
-    def redirect_for_signed_in_user
-      redirect_to(root_path) if signed_in?
-    end
+  def redirect_for_signed_in_user
+    redirect_to(root_path) if signed_in?
+  end
 end
