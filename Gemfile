@@ -30,6 +30,7 @@ group :test do
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'coveralls', require: false
   gem 'metric_fu', require: false
+  gem 'rubocop', require: false
 end
 
 # Use SCSS for stylesheets
