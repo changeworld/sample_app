@@ -34,6 +34,6 @@ SampleApp::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  # bcrypt'のコスト関数を下げることでテストの速度を向上させる。
+  # Increase the speed of the test by lowering the cost of bcrypt.
   ActiveModel::SecurePassword.min_cost = true
 end
