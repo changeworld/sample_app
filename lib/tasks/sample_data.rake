@@ -8,11 +8,7 @@ namespace :db do
 end
 
 def make_users
-  admin = User.create!(name:     'Example User',
-                       email:    'example@railstutorial.jp',
-                       password: 'foobar',
-                       password_confirmation: 'foobar',
-                       admin: true)
+  make_admin_user
   99.times do |n|
     name  = Faker::Name.name
     email = "example-#{n + 1}@railstutorial.jp"
@@ -22,6 +18,14 @@ def make_users
                  password: password,
                  password_confirmation: password)
   end
+end
+
+def make_admin_user
+  admin = User.create!(name:     'Example User',
+                       email:    'example@railstutorial.jp',
+                       password: 'foobar',
+                       password_confirmation: 'foobar',
+                       admin: true)
 end
 
 def make_microposts
