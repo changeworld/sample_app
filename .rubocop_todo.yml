@@ -9,10 +9,6 @@
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 1
-Lint/UselessAssignment:
-  Enabled: false
-
 # Offense count: 57
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
