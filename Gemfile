@@ -5,7 +5,7 @@ gem 'rails', '4.0.9'
 # Use Bootstrap
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
-gem 'bcrypt-ruby', '3.1.2'
+gem 'bcrypt-ruby', '3.1.5'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.9'
