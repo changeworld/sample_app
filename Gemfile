@@ -8,7 +8,7 @@ gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.5'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.7'
-gem 'bootstrap-will_paginate', '0.0.9'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use pg as the database for Active Record for Heroku
 gem 'pg', '0.15.1'
