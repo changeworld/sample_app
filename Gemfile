@@ -19,11 +19,11 @@ group :development, :test do
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
-  gem 'childprocess', '0.3.6'
+  gem 'childprocess', '0.5.5'
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
+  gem 'selenium-webdriver', '2.43.0'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.4.1'
   gem 'cucumber-rails', '1.4.1', require: false
@@ -56,7 +56,7 @@ gem 'jbuilder', '1.0.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '0.3.20', require: false
+  gem 'sdoc', '0.4.1', require: false
 end
 
 # Use ActiveModel has_secure_password
