@@ -317,7 +317,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (1.1.1)
+    turbolinks (2.4.0)
       coffee-rails
     tzinfo (0.3.41)
     uglifier (2.5.3)
@@ -358,6 +358,6 @@ DEPENDENCIES
   selenium-webdriver (= 2.43.0)
   spork-rails (= 4.0.0)
   sprockets (= 2.11.0)
-  turbolinks (= 1.1.1)
+  turbolinks (= 2.4.0)
   uglifier (= 2.5.3)
   will_paginate (= 3.0.7)
