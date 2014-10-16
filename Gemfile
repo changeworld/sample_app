@@ -72,5 +72,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :production do
-  gem 'rails_12factor', '0.0.2'
+  gem 'rails_12factor', '0.0.3'
 end
