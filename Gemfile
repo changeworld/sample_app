@@ -16,7 +16,7 @@ gem 'pg', '0.15.1'
 # Use Rspec for Test
 group :development, :test do
   gem 'rspec-rails', '2.14.0'
-  gem 'guard-rspec', '2.5.0'
+  gem 'guard-rspec', '4.3.1'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.1'
   gem 'childprocess', '0.5.5'
