@@ -15,7 +15,7 @@ gem 'pg', '0.15.1'
 
 # Use Rspec for Test
 group :development, :test do
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails', '2.14.0'
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.1'
@@ -27,7 +27,7 @@ group :test do
   gem 'capybara', '2.4.4'
   gem 'factory_girl_rails', '4.4.1'
   gem 'cucumber-rails', '1.4.2', require: false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner'
   gem 'coveralls', require: false
   gem 'metric_fu', require: false
   gem 'rubocop', require: false
